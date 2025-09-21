@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rimed Digital - Digitalización de Negocios</title>
+    <link rel="icon" type="image/jpeg" href="https://github.com/rimedhn/rimeddigital/blob/main/Rimed%20Logo.jpg?raw=true">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50" role="banner">
+        <nav class="container mx-auto px-4 py-4" role="navigation" aria-label="Navegación principal">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="https://github.com/rimedhn/rimeddigital/blob/main/Rimed%20Logo.jpg?raw=true" 
+                         alt="Rimed Digital Logo" 
+                         class="w-12 h-12 rounded-full object-cover"
+                         onerror="this.src=''; this.alt='Logo no disponible'; this.style.display='none';">
+                    <div>
+                        <span class="text-2xl font-bold text-gray-800">Rimed Digital</span>
+                        <p class="text-sm text-gray-600 -mt-1">Plataformas digitales y Marketing</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8" role="menubar">
+                    <li role="none"><a href="#inicio" class="text-gray-700 hover:text-purple-600 transition-colors font-medium" role="menuitem">Inicio</a></li>
+                    <li role="none"><a href="#nosotros" class="text-gray-700 hover:text-purple-600 transition-colors font-medium" role="menuitem">Nosotros</a></li>
+                    <li role="none"><a href="#servicios" class="text-gray-700 hover:text-purple-600 transition-colors font-medium" role="menuitem">Servicios</a></li>
+                    <li role="none"><a href="#contacto" class="text-gray-700 hover:text-purple-600 transition-colors font-medium" role="menuitem">Contacto</a></li>
+                </ul>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-600" 
+                        onclick="toggleMobileMenu()" 
+                        aria-label="Abrir menú de navegación"
+                        aria-expanded="false"
+                        id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="nav__mobile md:hidden fixed top-0 left-0 w-full h-full bg-white z-50" id="mobile-menu" role="menu">
+                <div class="flex justify-between items-center p-4 border-b">
+                    <span class="text-xl font-bold text-gray-800">Menú</span>
+                    <button onclick="toggleMobileMenu()" 
+                            aria-label="Cerrar menú de navegación"
+                            class="text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-600">
+                        <i class="fas fa-times text-xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <ul class="p-4 space-y-4">
+                    <li><a href="#inicio" class="block text-gray-700 hover:text-purple-600 py-2 text-lg" onclick="toggleMobileMenu()" role="menuitem">Inicio</a></li>
+                    <li><a href="#nosotros" class="block text-gray-700 hover:text-purple-600 py-2 text-lg" onclick="toggleMobileMenu()" role="menuitem">Nosotros</a></li>
+                    <li><a href="#servicios" class="block text-gray-700 hover:text-purple-600 py-2 text-lg" onclick="toggleMobileMenu()" role="menuitem">Servicios</a></li>
+                    <li><a href="#contacto" class="block text-gray-700 hover:text-purple-600 py-2 text-lg" onclick="toggleMobileMenu()" role="menuitem">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero__gradient pt-20 pb-16 text-white" role="main">
+        <div class="container mx-auto px-4 py-16">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="hero__title text-4xl md:text-6xl font-bold mb-6">
+                    Digitalizamos tu Negocio
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">
+                    Transformamos emprendimientos tradicionales en negocios digitales exitosos con soluciones integrales de marketing digital y desarrollo web.
+                </p>
+                <a href="#contacto" class="btn--primary inline-block px-8 py-4 rounded-full text-white font-semibold text-lg hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-purple-300">
+                    Comenzar Ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-16 bg-gray-50" role="region" aria-labelledby="about-title">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 id="about-title" class="section__title text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Acerca de Nosotros
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    En Rimed Digital somos especialistas en la transformación digital de negocios y emprendimientos. 
+                    Nuestro equipo combina creatividad, tecnología y estrategia para llevar tu negocio al siguiente nivel.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rocket text-purple-600 text-2xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Innovación</h3>
+                    <p class="text-gray-600">Utilizamos las últimas tecnologías y tendencias digitales para impulsar tu negocio.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-blue-600 text-2xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Experiencia</h3>
+                    <p class="text-gray-600">Años de experiencia ayudando a negocios a crecer en el mundo digital.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-green-600 text-2xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Resultados</h3>
+                    <p class="text-gray-600">Nos enfocamos en generar resultados medibles y crecimiento sostenible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-16" role="region" aria-labelledby="services-title">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 id="services-title" class="section__title text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Nuestros Servicios
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Ofrecemos soluciones digitales completas para transformar y hacer crecer tu negocio en línea.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Marketing Digital -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-purple-500">
+                    <div class="h-48 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-purple-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            <path d="M16 6l2.29 2.29-4.88 4.88-4-4L7 11.59 12.41 17 19 10.41 16 6z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Marketing Digital</h3>
+                        </div>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Gestión de redes sociales</li>
+                            <li>• Creación de contenido visual y video</li>
+                            <li>• Programación de anuncios publicitarios</li>
+                            <li>• Estrategias de marketing digital</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Desarrollo Web -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-blue-500">
+                    <div class="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Desarrollo Web</h3>
+                        </div>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Sitios web informativos</li>
+                            <li>• Tiendas en línea</li>
+                            <li>• Catálogos web con carrito</li>
+                            <li>• Sistemas de gestión personalizados</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Presencia Digital -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-green-500">
+                    <div class="h-48 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Presencia Digital</h3>
+                        </div>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Perfil de negocio en Google</li>
+                            <li>• Optimización en mapas</li>
+                            <li>• Plataformas de pagos electrónicos</li>
+                            <li>• Menús digitales y QR</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Aplicaciones -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-red-500">
+                    <div class="h-48 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Aplicaciones</h3>
+                        </div>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Aplicaciones móviles</li>
+                            <li>• Aplicaciones web</li>
+                            <li>• Menús de pantalla</li>
+                            <li>• Soluciones personalizadas</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Facturación -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-yellow-500">
+                    <div class="h-48 bg-gradient-to-br from-yellow-100 to-yellow-200 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Sistemas de Gestión</h3>
+                        </div>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Sistemas de facturación</li>
+                            <li>• Gestión de información</li>
+                            <li>• Soluciones personalizadas</li>
+                            <li>• Integración de procesos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Consultoría -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden border-t-4 border-indigo-500">
+                    <div class="h-48 bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center">
+                        <svg class="w-24 h-24 text-indigo-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"/>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Consultoría Digital</h3>
+                        </div>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Análisis de necesidades</li>
+                            <li>• Estrategias de digitalización</li>
+                            <li>• Optimización de procesos</li>
+                            <li>• Capacitación y soporte</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-16 bg-gray-50" role="region" aria-labelledby="contact-title">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 id="contact-title" class="section__title text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Contáctanos
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    ¿Listo para digitalizar tu negocio? Contáctanos y comencemos a trabajar juntos.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-phone text-purple-600" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Teléfono</h3>
+                            <a href="tel:93593126" class="text-gray-600 hover:text-purple-600 transition-colors">93593126</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-envelope text-blue-600" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Email</h3>
+                            <a href="mailto:indime.hn@gmail.com" class="text-gray-600 hover:text-blue-600 transition-colors">indime.hn@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="pt-8">
+                        <h3 class="font-semibold text-gray-800 mb-4">Síguenos en Redes Sociales</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/profile.php?id=." target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.instagram.com/rimed.digital/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@rimeddigital" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white">
+                                <i class="fab fa-tiktok" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <form onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nombre Completo</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                   placeholder="Tu nombre completo">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                   placeholder="tu@email.com">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                   placeholder="Tu número de teléfono">
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Servicio de Interés</label>
+                            <select id="service" name="service" required 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                <option value="">Selecciona un servicio</option>
+                                <option value="marketing-digital">Marketing Digital</option>
+                                <option value="desarrollo-web">Desarrollo Web</option>
+                                <option value="presencia-digital">Presencia Digital</option>
+                                <option value="aplicaciones">Aplicaciones</option>
+                                <option value="sistemas-gestion">Sistemas de Gestión</option>
+                                <option value="consultoria">Consultoría Digital</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" required 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                      placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn--primary w-full py-3 px-6 rounded-lg text-white font-semibold hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-purple-300">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://github.com/rimedhn/rimeddigital/blob/main/Rimed%20Logo.jpg?raw=true" 
+                             alt="Rimed Digital Logo" 
+                             class="w-10 h-10 rounded-full object-cover"
+                             onerror="this.src=''; this.alt='Logo no disponible'; this.style.display='none';">
+                        <div>
+                            <span class="text-xl font-bold">Rimed Digital</span>
+                            <p class="text-xs text-gray-400 -mt-1">Plataformas digitales y Marketing</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        Transformamos negocios tradicionales en empresas digitales exitosas.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Servicios</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Marketing Digital</li>
+                        <li>Desarrollo Web</li>
+                        <li>Aplicaciones Móviles</li>
+                        <li>Consultoría Digital</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-phone mr-2" aria-hidden="true"></i> 93593126</p>
+                        <p><i class="fas fa-envelope mr-2" aria-hidden="true"></i> indime.hn@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 Rimed Digital. Todos los derechos reservados.</p>
+                <p class="mt-2">Developed by <a href="https://github.com/rimedhn" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 transition-colors">@rimedhn</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="#" onclick="openWhatsApp()" class="whatsapp-float" aria-label="Contactar por WhatsApp" title="¡Chatea con nosotros!">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- Custom Modal -->
+    <div id="customModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 transform transition-all duration-300 scale-95" id="modalContent">
+            <div class="p-6 text-center">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" id="modalIcon">
+                    <!-- Icon will be inserted here -->
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2" id="modalTitle">Título</h3>
+                <p class="text-gray-600 mb-6" id="modalMessage">Mensaje</p>
+                <button onclick="closeModal()" class="btn--primary px-6 py-2 rounded-lg text-white font-semibold hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-purple-300">
+                    Entendido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
